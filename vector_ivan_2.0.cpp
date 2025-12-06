@@ -1,5 +1,7 @@
 #include <iostream>
 
+// С этим классом не запускается профайлер
+
 template <typename T>
 class Subvector {
 private:
@@ -149,4 +151,5 @@ public:
     unsigned int get_capacity() const {
         return cap;
     }
+
 };
