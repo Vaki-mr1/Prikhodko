@@ -1,7 +1,7 @@
  #include <iostream>
 #include <random>
 #include <chrono>
-#include <algorithm> // для std::min
+#include <algorithm> 
 
 struct subvector {
      int *mas;
@@ -36,7 +36,7 @@ bool resize(subvector *qv, unsigned int new_capacity) {
         new_mas[i] = qv->mas[i];
     }
 
-    delete[] qv->mas; // Удаляем старое
+    delete[] qv->mas; 
     qv->mas = new_mas;
     qv->capacity = new_capacity;
     
@@ -62,7 +62,6 @@ bool push_back(subvector *qv, int d) {
     return true;
 }
 
-// Удаление элемента
 int pop_back(subvector *qv) {
     if (qv->top == 0) {
         return 0;
@@ -132,8 +131,8 @@ int main()
         push_back(&sv, test_sequence[i]);
     }
     finish = get_time();
-    for (int i = 0; i < n; i++)   //!!! This is a hack to bamboozle the O3 optimization.
-        sum_for_O3 += sv.mas[i];  // I might as well use it to test push/pop.
+    for (int i = 0; i < n; i++) 
+        sum_for_O3 += sv.mas[i];  
     cout << "000 Straight push_back: \t\t" << finish - start << endl;
     total += finish - start;
     start = get_time();
@@ -188,7 +187,7 @@ int main()
     }
     cout << "003 Random pop/push equal amount: \t" << finish - start << "\t\t" << sum_for_O3 << endl;
     total += finish - start;
-    sum_for_O3 = 0; // This variable will be printed so O3 won't cut the whole thing.
+    sum_for_O3 = 0; 
     start = get_time();
     for (int i = 0; i < n; i++)
     {
@@ -202,7 +201,7 @@ int main()
     shrink_to_fit(&sv);
     cout << "004 Random pop/push more push: \t\t" << finish - start << "\t\t" << sum_for_O3 << endl;
     total += finish - start;
-    sum_for_O3 = 0; // This variable will be printed so O3 won't cut the whole thing.
+    sum_for_O3 = 0; 
     start = get_time();
     for (int i = 0; i < n; i++)
     {
@@ -222,3 +221,4 @@ int main()
     delete[] pop_push_sequence_pushpush;
     return 0;
 }
+
