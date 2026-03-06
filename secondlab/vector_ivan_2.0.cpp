@@ -2,6 +2,7 @@
 #include <random>
 #include <chrono>
 #include <algorithm> 
+#include "subvector.hpp"
 
 struct subvector {
      int *mas;

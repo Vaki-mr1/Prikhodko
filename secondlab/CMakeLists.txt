@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.10)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_executable(list_test list_ivan_2.0.cpp subforwardlist.h)
+add_executable(vector_test vector_ivan_2.0.cpp subvector.h)
