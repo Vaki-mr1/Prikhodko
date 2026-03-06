@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_executable(int_task intivan.cpp intivan.hpp)
+add_executable(theory_task teorivan.cpp teorivan.hpp)
+add_executable(float_task floativan.cpp floativan.hpp)

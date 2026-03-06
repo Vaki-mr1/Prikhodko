@@ -1,4 +1,5 @@
 #include <iostream>
+#include "teorivan.hpp"
 
 int main() {
     std::cout << "=== Теоретические оценки ===" << std::endl;
